@@ -1,6 +1,6 @@
-export const getProducts = () => fetch('http://backend:4000/').then(res => res.json());
+export const getProducts = () => fetch('http://localhost:4000/').then(res => res.json());
 
-export const createProduct = (data) => fetch("http://backend:4000/create", {
+export const createProduct = (data) => fetch("http://localhost:4000/create", {
   method: "POST",
   headers: {
     "Accept": "application/json",
@@ -10,9 +10,9 @@ export const createProduct = (data) => fetch("http://backend:4000/create", {
   body: JSON.stringify(data)
 }); 
 
-export const getProduct = (id) => fetch(`http://backend:4000/${id}`).then(res => res.json())
+export const getProduct = (id) => fetch(`http://localhost:4000/${id}`).then(res => res.json())
 
-export const updateProduct = (data, id) => fetch(`http://backend:4000/${id}`, {
+export const updateProduct = (data, id) => fetch(`http://localhost:4000/${id}`, {
   method: "POST",
   headers: {
     "Accept": "application/json",
