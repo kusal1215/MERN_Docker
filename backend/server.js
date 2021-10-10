@@ -56,6 +56,9 @@ app.post("/:id", (req, res) => {
         res.status(404).send("items not found");
       } else {
         items.product_name = req.body.product_name;
+        items.product_qty = req.body.product_qty;
+        items.product_price = req.body.product_price;
+        items.product_des = req.body.product_des;
   
         items
           .save()
@@ -68,5 +71,5 @@ app.post("/:id", (req, res) => {
   });
 
 app.listen(PORT, () => {
-    console.log("Server is runnig on port" + PORT );
+    console.log("Server is runnig on port " + PORT );
 })

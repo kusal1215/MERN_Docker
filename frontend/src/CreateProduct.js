@@ -10,15 +10,21 @@ export const CreateProduct = () => {
     const onSubmit = async (data) => {
         // alert(JSON.stringify(data))
        await createProduct(data)
-       history.push('/')
+       history.push('/product-list')
     }
 
     return (
         <div className="container">
-            <div className="mt-3">
-                <h3>Create A Product</h3>
+            <div className="row">
+                <div className="col-md-3"></div>
+              
+                <div className="col-md-6 pt-4">
+                    <h3 className=" pb-4">Create A Product</h3> 
 
-                <ItemForm onSubmit={onSubmit}/>
+                    <ItemForm onSubmit={onSubmit}/>
+                </div>
+
+                <div className="col-md-3"></div>
             </div>
         </div>
     )

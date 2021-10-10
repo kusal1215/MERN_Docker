@@ -23,7 +23,7 @@ export const EditProduct = () => {
 
     const onSubmit = async (data) => {
         await updateProduct(data , match.params.id);
-        history.push('/');
+        history.push('/product-list');
     }
 
 

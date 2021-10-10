@@ -17,14 +17,17 @@ export const ProductList = () => {
 
     return (
         <div className="container">
-            <div className="mt-3">
-                <h3>Product List</h3>
+            <div className="mt-5">
+                <h3 className="text-center">Product List</h3>
 
-                <table className="table table-striped mt-3">
+                <table className="table table-striped mt-5">
                     <thead>
                         <tr>
                             <th>Product Name</th>
-                            <th>Action</th>
+                            <th>Product Qty</th>
+                            <th>Product Price</th>
+                            <th>Product Des</th>
+                            <th>Edit Product</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +37,15 @@ export const ProductList = () => {
                                 <tr key={item._id}>
                                     <td>
                                         {item.product_name}
+                                    </td>
+                                    <td>
+                                        {item.product_qty}
+                                    </td>
+                                    <td>
+                                        {item.product_price}
+                                    </td>
+                                    <td>
+                                        {item.product_des}
                                     </td>
                                     <td>
                                         <Link to={`/edit/${item._id}`}>
